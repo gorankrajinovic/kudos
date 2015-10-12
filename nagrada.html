@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  
+  </style>
+</head>
+<body>
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">Matematika</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="javascript:window.location.assign(document.referrer);">Nazad</a></li>
+
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+  <h2>BRAVO!! Svi odgovori su tacni! Uzivaj u crtacu.</h2>
+
+<div class="embed-responsive embed-responsive-16by9">
+<div id="player" class="embed-responsive-item"></div>
+
+    <script src="http://www.youtube.com/player_api"></script>
+
+    <script>
+    var back = document.referrer;
+        // create youtube player
+        var id_array = ['2KNiT1_l-0I', 'KvdTydWQ11I', 'wLwHPJOgfVA', 'ibLzsnipyqY', 'DjGX0OSCcqc', 'VrqQXlr_oIo', 'he239JZmGzw', 'fAI-JylK0d4', 'd-emxrMFB8w', 'he239JZmGzw', 'oz0kMuNjZ8k', 'xw_XKgpn2OI', 'AZ7M7oxE5Yk', 'SV-0RjrrziQ', 'E5T4zjef9f8', '_mUF9SD9vug', 'RHangZvK1UI', 'omfCpNYVi1w'];
+        var id = id_array[Math.floor((Math.random() * id_array.length))];
+        var player;
+        function onYouTubePlayerAPIReady() {
+            player = new YT.Player('player', {
+              height: '390',
+              width: '640',
+              videoId: id,
+              events: {
+                'onReady': onPlayerReady,
+                'onStateChange': onPlayerStateChange
+              }
+            });
+        }
+
+        // autoplay video
+        function onPlayerReady(event) {
+            event.target.playVideo();
+        }
+
+        // when video ends
+        function onPlayerStateChange(event) {        
+            if(event.data === 0) {          
+                window.location.replace(back);
+            }
+        }
+
+    </script>
+</div></div>
+
+</body>
+</html>
+
