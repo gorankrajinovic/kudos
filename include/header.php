@@ -77,7 +77,7 @@
 								<ul class="dropdown-menu">
 									<li><a href="./index.php?zadaci=3x20">Brojevi do 20</a></li>
 									<li><a href="./index.php?zadaci=3x50">Brojevi do 50</a></li>
-									<li><a href="./zadaci.php?zadaci=3x100">Brojevi do 100</a></li>
+									<li><a href="./index.php?zadaci=3x100">Brojevi do 100</a></li>
 								</ul>
 							</li>
 						</ul>
