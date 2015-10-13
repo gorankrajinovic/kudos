@@ -51,16 +51,7 @@ for($i=0; $i<$config['broj_izraza']; $i++){
 	
 
 	if(($num1 < $num2) AND ($opr1 == ' - ')){
-		if($num1 <=10){
-				$num1 = $num1 + 10;
-			}
-		do {
-			
-
-			shuffle($numbers_array);
-			$num2 = $numbers_array[0];
-			
-		} while ($num1 <= $num2);
+		$opr1 = ' + ';
 
 	}
 
@@ -78,14 +69,7 @@ for($i=0; $i<$config['broj_izraza']; $i++){
 		$prvi_par = racun($opr1, $num1, $num2);
 
 	if(($prvi_par < $num3) AND ($opr2 == ' - ')){
-		if($prvi_par <=10){
-				$prvi_par = $prvi_par + 10;
-			}
-		do {
-			
-			shuffle($numbers_array);
-			$num3 = $numbers_array[1];
-		} while ($prvi_par <= $num3);
+		$opr2 = ' - ';
 	}
 	if(($prvi_par + $num3 > $config['broj_limit']) AND ($opr2 == ' + ')){
 		do {
